@@ -4,12 +4,13 @@ $(document).ready(function(){
     $('.prev').click(function(){
         var images2=$('.images img.active');
         images2.removeClass('active');
-        if(images2.hasClass('last')){
-            var ultimaImg=$('.images img.first');
+
+        if(images2.hasClass('first')){
+            var ultimaImg=$('.images img.last');
             ultimaImg.addClass('active')
         }
         else{
-            images2.next().addClass('active');
+            images2.prev().addClass('active');
 
         }
         
